@@ -10,6 +10,7 @@ function Login(){
                 <input type="text" placeholder='Usuário'/>
                 <input type="password" placeholder='Senha'/>
             </form>
+            <p>Esqueceu a senha?</p>
             <Botao />
 
         </section>
