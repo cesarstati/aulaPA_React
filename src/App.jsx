@@ -5,7 +5,8 @@ function App(){
   return (
     <> 
     
-    <Header />
+    <Header titulo="Sistema para lanchonete"
+            subtitulo = "O melhor da Região" />
     <Login />
 
     </>
