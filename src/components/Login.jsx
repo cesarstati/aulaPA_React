@@ -1,17 +1,16 @@
-import Botao from "./Botao"
 import './Login.css'
 
 function Login(){
     return (
         <>
-        <section className="container">
+        <section className="login-container">
             <h2>Login</h2>
-            <form action="" className='formulario'>
                 <input type="text" placeholder='Usuário'/>
                 <input type="password" placeholder='Senha'/>
-            </form>
+            <button>Enviar</button>
+            
             <p>Esqueceu a senha?</p>
-            <Botao />
+            
 
         </section>
         
