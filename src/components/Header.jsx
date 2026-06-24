@@ -8,13 +8,9 @@ function Header({titulo,subtitulo}){
         <h2>{subtitulo}</h2>
        </header>
         
-
-       
-        
 </>
-
-        
-    )
+       
+    )  
 }
 
 export default Header
