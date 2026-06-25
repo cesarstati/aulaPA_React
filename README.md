@@ -1,3 +1,8 @@
+## Projeto Lanchonete
+
+Este projeto está sendo desenvolvido em React + Vite na aula de Programação de Aplicativo - SENAI-CIC
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
