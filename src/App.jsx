@@ -2,6 +2,8 @@ import CardProd from "./components/CardProd";
 import Header from "./components/Header";
 import Login from "./components/Login";
 import Funcionario from "./components/Funcionarios";
+import Contador from "./components/Contador";
+
 
 function App(){
   return (
@@ -24,7 +26,10 @@ function App(){
               />
 
     <Funcionario nome = "João"
-cargo = "Aendente" />
+cargo = "Atendente" />
+
+
+    <Contador />
     </>
     
   )

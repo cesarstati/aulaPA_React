@@ -20,6 +20,10 @@
     margin-top: 10px;
 }
 
+.login-container input::placeholder{
+    color: blue;
+}
+
 .login-container button{
     padding: 10px;
 }
