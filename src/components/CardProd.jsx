@@ -1,0 +1,11 @@
+// import './CardProd.css'
+
+function CardProd({nome,preco}){
+    return (
+        <div className="card_prod">
+            <h3>{nome}</h3>
+            <p>R$ {preco}</p>
+        </div>
+    )
+}
+export default CardProd

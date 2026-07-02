@@ -1,0 +1,25 @@
+.login-container {
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+
+    border: 1px solid #4a4646;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-container h2{
+    color: black;
+}
+
+.login-container input{
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.login-container button{
+    padding: 10px;
+}
