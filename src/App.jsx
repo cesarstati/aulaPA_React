@@ -6,7 +6,7 @@ import Contador from "./components/Contador";
 // import NomeDinamico from "./components/NomeDinamico";
 import Quantidade from "./components/Quantidade";
 import Calculadora from "./components/Calculadora";
-import Lista from "./components/Lista";
+// import Lista from "./components/Lista";
 
 
 function App(){
