@@ -1,6 +1,14 @@
 .card_prod{
-    border: 1px solid #222;
-    border-radius: 5px;
-    margin-top: 10px;
-    width: 30%;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.card_prod img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
 }

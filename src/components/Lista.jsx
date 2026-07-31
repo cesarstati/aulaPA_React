@@ -22,7 +22,12 @@ function Lista(){
 
         {
         lanches.map(lanche => (
-                <p>{lanche}</p>
+            <>
+                <p key = {lanche.id}></p>
+                <p> nome: {lanche.nome}</p>
+                <p> preco: {lanche.preco}</p>
+
+            </>
         )           
         )}
         
