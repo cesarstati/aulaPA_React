@@ -12,3 +12,16 @@
     height: 180px;
     object-fit: cover;
 }
+
+.card_prod button {
+    width: 50px;
+    margin: 0 10px;
+}
+
+.adicionar {
+    margin-top: 10px;
+}
+
+.adicionar button{
+    width: 100px;
+}

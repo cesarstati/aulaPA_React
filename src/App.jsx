@@ -46,14 +46,9 @@ function App(){
             imagem={lanche.imagem}
             />
           )
-
           )
-        }
-        
-          
+        }      
       </div>
-
-
       <div className="lista_cards">
         
         {
@@ -66,23 +61,15 @@ function App(){
           )
 
           )
-        }
-        
+        }       
           
-      </div>
+      </div>    
     
-    
-    {/* <Contador /> */}
-    
-
+    {/* <Contador /> */}   
     {/* <NomeDinamico /> */}
-
     {/* <Quantidade /> */}
-
     {/* <Calculadora /> */}
-    {/* <Lista /> */}
-    
-
+    {/* <Lista /> */}   
     </>
     
   )
