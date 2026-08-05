@@ -10,24 +10,25 @@ import Calculadora from "./components/Calculadora";
 import Lista from "./components/Lista";
 import "./App.css";
 import { useState } from "react";
+import Carrinho from "./components/Carrinho";
 
 
 function App(){
 
-  const [carrinho,setCarrinho] = useState(0)
-  function adicionarCarrinho(){
-    setCarrinho(carrinho + 1)
+  const [carrinho,setCarrinho] = useState([])// é um array agora, não item isolado
+  function adicionarCarrinho(produto){
+    setCarrinho([...carrinho,produto])
   }
 
    const lanches = [
         {id:1, nome: 'X-salada', preco: '15,50',categoria:'lanche' , imagem: "/images/salada.jpg"},
         {id:2, nome: 'X-burguer', preco: '17,50', categoria:'lanche' ,imagem: "/images/burguer.jpg"},
         {id:3, nome: 'Fanta Uva',preco: '5,50', categoria:'Bebida' ,imagem: "/images/fanta_uva.webp"},
-        {id:3, nome: 'Coca Cola',preco: '5,50', categoria:'Bebida' ,imagem: "/images/coca_cola.jpeg"},  
-        {id:3, nome: 'Fanta Laranja',preco: '5,50', categoria:'Bebida' ,imagem: "/images/fanta_laranja.webp"},  
-        {id:3, nome: 'X-egg',preco: '12,00', categoria:'lanche' ,imagem: "/images/x-egg.jpg"},  
-        {id:3, nome: 'X-tudo',preco: '18,50', categoria:'lanche' ,imagem: "/images/x-tudo.jpg"},  
-        {id:3, nome: 'Água com gás',preco: '3,50',categoria:'Bebida' , imagem: "/images/agua_gas.jpg"}, 
+        {id:4, nome: 'Coca Cola',preco: '5,50', categoria:'Bebida' ,imagem: "/images/coca_cola.jpeg"},  
+        {id:5, nome: 'Fanta Laranja',preco: '5,50', categoria:'Bebida' ,imagem: "/images/fanta_laranja.webp"},  
+        {id:6, nome: 'X-egg',preco: '12,00', categoria:'lanche' ,imagem: "/images/x-egg.jpg"},  
+        {id:7, nome: 'X-tudo',preco: '18,50', categoria:'lanche' ,imagem: "/images/x-tudo.jpg"},  
+        {id:8, nome: 'Água com gás',preco: '3,50',categoria:'Bebida' , imagem: "/images/agua_gas.jpg"}, 
         ]
 
     const funcionario = [
@@ -40,7 +41,7 @@ function App(){
     
      <Header titulo="Sistema para lanchonete"
             subtitulo = "O melhor da Região" 
-            quantidade = {carrinho}
+            quantidade = {carrinho.length}//antes {quantidade}. Agora carrinho é uma array (lista de itens)
             />
             
     <Login />
@@ -61,6 +62,9 @@ function App(){
           )
         }      
       </div>
+
+        <Carrinho itens={carrinho}/>
+
       <div className="lista_cards">
         
         {

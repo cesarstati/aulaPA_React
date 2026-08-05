@@ -19,7 +19,13 @@ function CardProd({nome,preco,imagem,categoria,onAdicionarCarrinho}){
             <button onClick={() => setQuantidade(quantidade + 1)}> + </button>
 <p className="adicionar">
     {/* <button onClick={() =>alert(`${quantidade} ${nome} adicionado ao carrinho!`)}>Adicionar item</button> */}
-    <button onClick={onAdicionarCarrinho}>Adicionar ao Carrinho</button>
+    <button onClick={() => onAdicionarCarrinho({
+        nome,
+        preco,
+        categoria,
+        imagem
+    })}
+    >Adicionar ao Carrinho</button>
 </p>
         </div>
     )
