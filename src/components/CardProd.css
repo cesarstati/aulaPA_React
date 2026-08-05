@@ -24,4 +24,10 @@
 
 .adicionar button{
     width: 100px;
+    background-color: rgb(146, 231, 162);
+    border: 0;
+}
+
+.adicionar button:hover{
+    background-color:rgb(22, 172, 49);
 }
