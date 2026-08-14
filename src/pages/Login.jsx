@@ -1,13 +1,21 @@
 import './Login.css'
+import { useNavigate} from "react-router-dom"
 
 function Login(){
+    const navigate = useNavigate();
+
+    function entrar () {
+        // lógica de autenticação aqui
+        navigate('/home');
+    }
+
     return (
         <>
         <section className="login-container">
             <h2>Login</h2>
                 <input type="text" placeholder='Usuário'/>
                 <input type="password" placeholder='Senha'/>
-            <button>Enviar</button>
+            <button onClick={entrar}>Enviar</button>
             
             <p>Esqueceu a senha?</p>
             
