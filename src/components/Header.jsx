@@ -21,7 +21,7 @@ function Header({titulo,subtitulo,quantidade}){
             <Link to="/home">Home</Link>
             <Link to="/carrinho">Carrinho</Link>
             <Link to="/pedido">Pedido</Link>
-            <Link to="/">Login</Link>            
+            <Link to="/">Logout</Link>            
         </nav>
         
 </>

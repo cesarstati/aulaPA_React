@@ -4,6 +4,7 @@ import Login from "../pages/Login";
 import "../App.css";
 import { useState } from "react";
 import Carrinho from "../components/Carrinho";
+import { useNavigate } from "react-router-dom";
 
 
 function Home (){
@@ -24,6 +25,12 @@ const [carrinho,setCarrinho] = useState([])// é um array agora, não item isola
         ]
 
         const usuario = localStorage.getItem("usuario");
+        const navigate = useNavigate();
+
+        function sair() {
+          localStorage.removeItem("usuario");
+          navigate('/');
+        }
        
 return (
     <>
@@ -33,6 +40,7 @@ return (
             quantidade = {carrinho.length}//antes {quantidade}. Agora carrinho é uma array (lista de itens)
             />
             <p>Olá, {usuario}!</p>
+            <p> <button onClick={sair}>Sair</button></p>
       <div className="lista_cards">
         
         {
