@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import './Pedido.css'
 
 function Pedido(){
     
@@ -9,28 +10,65 @@ function Pedido(){
     subtitulo="O melhor da Região"
     quantidade={0}
 />
-        <h1>👨‍🍳 Pedidos da Cozinha</h1>
+        <div className="pedidos">
 
-    <hr />
+            <h1>👨‍🍳 Pedidos da Cozinha</h1>
 
-    <h2>Pedido #001</h2>
+            <div className="pedido">
 
-    <p><strong>Mesa:</strong> 03</p>
-    <p><strong>Horário:</strong> 12:15</p>
+                <div className="pedido-header">
 
-    <hr />
+                    <h2>Pedido #001</h2>
 
-    <ul>
-        <li>2x X-Burguer</li>
-        <li>1x Batata Frita</li>
-        <li>2x Coca-Cola</li>
-    </ul>
+                    <span className="pedido-numero">
+                        Pedido recebido
+                    </span>
 
-    <hr />
+                </div>
 
-    <p><strong>Status:</strong></p>
 
-    <button>Preparando</button>
+                <div className="pedido-info">
+
+                    <p>
+                        <strong>Mesa:</strong> 03
+                    </p>
+
+                    <p>
+                        <strong>Horário:</strong> 12:15
+                    </p>
+
+                </div>
+
+
+                <ul className="pedido-itens">
+
+                    <li>🍔 2x X-Burguer</li>
+
+                    <li>🍟 1x Batata Frita</li>
+
+                    <li>🥤 2x Coca-Cola</li>
+
+                </ul>
+
+
+                <div className="pedido-status">
+
+                    <strong>Status:</strong>
+
+                    <span className="status-preparando">
+                        Preparando
+                    </span>
+
+                </div>
+
+
+                <button>
+                    Pedido Pronto
+                </button>
+
+            </div>
+
+        </div>
 
         </>
     )
