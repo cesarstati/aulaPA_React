@@ -1,21 +1,34 @@
 import './Login.css'
 import { useNavigate} from "react-router-dom"
+import { useState } from "react";
 
 function Login(){
+    const [usuario, setUsuario] = useState("");
+    const [senha, setSenha] = useState("");
     const navigate = useNavigate();
 
     function entrar () {
-        // lógica de autenticação aqui
-      localStorage.setItem("usuario", "Stati"); // Simulando um usuário logado
-        navigate('/home');
-    }
+
+        if(usuario === "admin" && senha === "123"){
+
+            localStorage.setItem("usuario", usuario);
+            navigate('/home');
+
+        }
+
+        else {
+            alert("Usuário ou senha inválidos");
+        }
+
+
+         }
 
     return (
         <>
         <section className="login-container">
             <h2>Login</h2>
-                <input type="text" placeholder='Usuário'/>
-                <input type="password" placeholder='Senha'/>
+                <input type="text" value= {usuario} onChange={(e) => setUsuario(e.target.value)} placeholder='Usuário'/>
+                <input type="password" value={senha} onChange={(e) => setSenha(e.target.value)} placeholder='Senha'/>
             <button onClick={entrar}>Enviar</button>
             
             <p>Esqueceu a senha?</p>
