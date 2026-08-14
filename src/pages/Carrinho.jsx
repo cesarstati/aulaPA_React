@@ -10,7 +10,8 @@ function Carrinho(){
     titulo="Sistema para lanchonete"
     subtitulo="O melhor da Região"
 />
-        <h3>🛒 Carrinho de Compras</h3>
+        <div className="carrinho">
+        <h2>🛒 Carrinho de Compras</h2>
 
     <table border="1" cellPadding="10">
         <thead>
@@ -52,13 +53,26 @@ function Carrinho(){
 
     <hr />
 
-    <p><strong>Total de itens:</strong> 6</p>
+    <div className="resumo-carrinho">
+        <p>
+            <strong>Total de itens:</strong> 6
+        </p>
 
-    <p><strong>Valor Total:</strong> R$ 74,00</p>
+        <p>
+            <strong>Valor Total:</strong> R$ 74,00
+        </p>
+    </div>
 
-    <button>Limpar Carrinho</button>
-    <button>Finalizar Pedido</button>
+    <div className="botoes-carrinho">
+        <button className="btn-limpar">
+            Limpar Carrinho
+        </button>
 
+        <button className="btn-finalizar">
+            Finalizar Pedido
+        </button>
+    </div>
+</div>
 
         </>
     )
