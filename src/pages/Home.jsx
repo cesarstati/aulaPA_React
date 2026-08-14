@@ -1,7 +1,6 @@
 import CardProd from "../components/CardProd";
 import Header from "../components/Header";
 import Login from "../pages/Login";
-import Funcionario from "../components/Funcionarios";
 import "../App.css";
 import { useState } from "react";
 import Carrinho from "../components/Carrinho";
@@ -24,18 +23,16 @@ const [carrinho,setCarrinho] = useState([])// é um array agora, não item isola
         {id:8, nome: 'Água com gás',preco: '3,50',categoria:'Bebida' , imagem: "/images/agua_gas.jpg"}, 
         ]
 
-    const funcionario = [
-      {id:101, nome: "João Marcelo" , cargo: "Atendente"},
-      {id:102, nome: "Daiana Jaguara" , cargo: "Gerente"},
-      {id:103, nome: "Djalma Poperô" , cargo: "Atendente"},
-    ]
+        const usuario = localStorage.getItem("usuario");
+       
 return (
     <>
+    
     <Header titulo="Sistema para lanchonete"
             subtitulo = "O melhor da Região" 
             quantidade = {carrinho.length}//antes {quantidade}. Agora carrinho é uma array (lista de itens)
             />
-            
+            <p>Olá, {usuario}!</p>
       <div className="lista_cards">
         
         {
@@ -53,9 +50,9 @@ return (
         }      
       </div>
 
-        <Carrinho itens={carrinho}/>
+        {/* <Carrinho itens={carrinho}/> */}
 
-      <div className="lista_cards">
+      {/* <div className="lista_cards">
         
         {
           funcionario.map(func => (
@@ -69,7 +66,7 @@ return (
           )
         }       
           
-      </div>    
+      </div>     */}
     
     {/* <Contador /> */}   
     {/* <NomeDinamico /> */}

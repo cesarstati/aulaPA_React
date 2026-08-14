@@ -6,6 +6,7 @@ function Login(){
 
     function entrar () {
         // lógica de autenticação aqui
+      localStorage.setItem("usuario", "Stati"); // Simulando um usuário logado
         navigate('/home');
     }
 
