@@ -1,7 +1,14 @@
+import Header from "../components/Header";
+
 function Pedido(){
     
     return (
         <>
+        <Header
+    titulo="Sistema para lanchonete"
+    subtitulo="O melhor da Região"
+    quantidade={0}
+/>
         <h1>👨‍🍳 Pedidos da Cozinha</h1>
 
     <hr />

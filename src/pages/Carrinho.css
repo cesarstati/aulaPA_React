@@ -1,0 +1,176 @@
+```css
+/* ==============================
+   CARRINHO DE COMPRAS
+   ============================== */
+
+.carrinho {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+}
+
+/* Título */
+
+.carrinho h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1f2937;
+    font-size: 30px;
+}
+
+
+/* ==============================
+   TABELA
+   ============================== */
+
+.carrinho table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.carrinho th {
+    background-color: #dc2626;
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.carrinho th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.carrinho th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.carrinho td {
+    padding: 18px 12px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+    color: #374151;
+    font-size: 17px;
+}
+
+/* efeito ao passar o mouse */
+
+.carrinho tbody tr:hover {
+    background-color: #fef2f2;
+}
+
+
+/* ==============================
+   IMAGENS / EMOJIS
+   ============================== */
+
+.carrinho td:first-child {
+    font-size: 30px;
+}
+
+
+/* ==============================
+   RESUMO
+   ============================== */
+
+.resumo-carrinho {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff5f5;
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+}
+
+.resumo-carrinho p {
+    margin: 5px;
+    font-size: 18px;
+    color: #374151;
+}
+
+.resumo-carrinho strong {
+    color: #dc2626;
+    font-size: 22px;
+}
+
+
+/* ==============================
+   BOTÕES
+   ============================== */
+
+.botoes-carrinho {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.botoes-carrinho button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+/* Limpar */
+
+.btn-limpar {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+.btn-limpar:hover {
+    background-color: #d1d5db;
+}
+
+
+/* Finalizar */
+
+.btn-finalizar {
+    background-color: #16a34a;
+    color: white;
+}
+
+.btn-finalizar:hover {
+    background-color: #15803d;
+    transform: translateY(-1px);
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+@media (max-width: 700px) {
+
+    .carrinho {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .carrinho h2 {
+        font-size: 24px;
+    }
+
+    .carrinho th,
+    .carrinho td {
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+
+    .resumo-carrinho {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+```

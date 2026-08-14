@@ -1,8 +1,16 @@
+import './Carrinho.css'
+import Header from '../components/Header'
+
+
 function Carrinho(){
 
     return (
         <>
-        <h2>🛒 Carrinho de Compras</h2>
+        <Header
+    titulo="Sistema para lanchonete"
+    subtitulo="O melhor da Região"
+/>
+        <h3>🛒 Carrinho de Compras</h3>
 
     <table border="1" cellPadding="10">
         <thead>
