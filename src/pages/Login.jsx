@@ -4,14 +4,34 @@ import { useNavigate } from 'react-router-dom'
 
 function Login(){
     
-    const navegate = useNavigate()
+    const navigate = useNavigate()
 
     const [usuario, setUsuario] = useState("");//guarda o que foi digitado
     const [senha, setSenha] = useState("");//guarda a senha
     const [mensagem, setMensagem] = useState("");//mostra o resultado da validação
 
     function entrar (){
-        navegate("/home")
+        if (usuario === "admin" && senha === "123") {
+
+        localStorage.setItem("usuario", usuario);
+        localStorage.setItem("perfil", "cozinha");
+
+        navigate("/pedido");
+
+    } 
+    
+    else if (usuario === "cliente" && senha === "123") {
+
+        localStorage.setItem("usuario", usuario);
+        localStorage.setItem("perfil", "cliente");
+
+        navigate("/home");
+    
+    }else {
+
+        setMensagem("Usuário ou senha inválidos.");
+
+    }
     }
 
     

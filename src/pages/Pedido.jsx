@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import './Pedido.css'
 
 function Pedido(){
-    
+    const usuario = localStorage.getItem("usuario");
     return (
         <>
         <Header
@@ -13,6 +13,7 @@ function Pedido(){
         <div className="pedidos">
 
             <h1>👨‍🍳 Pedidos da Cozinha</h1>
+            <p>Usuário: {usuario}</p>
 
             <div className="pedido">
 
