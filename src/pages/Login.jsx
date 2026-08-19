@@ -1,35 +1,37 @@
 import './Login.css'
-import { useNavigate} from "react-router-dom"
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom'
 
 function Login(){
-    const [usuario, setUsuario] = useState("");
-    const [senha, setSenha] = useState("");
-    const navigate = useNavigate();
+    
+    const navegate = useNavigate()
 
-    function entrar () {
+    const [usuario, setUsuario] = useState("");//guarda o que foi digitado
+    const [senha, setSenha] = useState("");//guarda a senha
+    const [mensagem, setMensagem] = useState("");//mostra o resultado da validação
 
-        if(usuario === "admin" && senha === "123"){
+    function entrar (){
+        navegate("/home")
+    }
 
-            localStorage.setItem("usuario", usuario);
-            navigate('/home');
-
-        }
-
-        else {
-            alert("Usuário ou senha inválidos");
-        }
-
-
-         }
+    
 
     return (
         <>
         <section className="login-container">
             <h2>Login</h2>
-                <input type="text" value= {usuario} onChange={(e) => setUsuario(e.target.value)} placeholder='Usuário'/>
-                <input type="password" value={senha} onChange={(e) => setSenha(e.target.value)} placeholder='Senha'/>
+                <input type="text"  
+                placeholder='Usuário' 
+                value={usuario}
+                onChange={(e) => setUsuario(e.target.value)}/>
+                
+                <input 
+                type="password"
+                placeholder='Senha'
+                value={senha}
+                onChange={(e) => setSenha(e.target.value)}/>
             <button onClick={entrar}>Enviar</button>
+            <p>{mensagem}</p>
             
             <p>Esqueceu a senha?</p>
             

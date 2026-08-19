@@ -39,8 +39,7 @@ return (
             subtitulo = "O melhor da Região" 
             quantidade = {carrinho.length}//antes {quantidade}. Agora carrinho é uma array (lista de itens)
             />
-            <p>Olá, {usuario}!</p>
-            <p> <button onClick={sair}>Sair</button></p>
+           
       <div className="lista_cards">
         
         {
