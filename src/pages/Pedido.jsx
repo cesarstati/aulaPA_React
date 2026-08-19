@@ -1,77 +1,52 @@
 import Header from "../components/Header";
-import './Pedido.css'
+import "./Pedido.css";
 
-function Pedido(){
+function Pedido() {
+
+    const perfil = localStorage.getItem("perfil");
     const usuario = localStorage.getItem("usuario");
+
+    if (perfil !== "cozinha") {
+        return (
+            <>
+                <h1>Acesso não autorizado</h1>
+                <p>Esta página é exclusiva da cozinha.</p>
+                <p>Perfil atual: {perfil}</p>
+            </>
+        );
+    }
+
     return (
         <>
-        <Header
-    titulo="Sistema para lanchonete"
-    subtitulo="O melhor da Região"
-    quantidade={0}
-/>
-        <div className="pedidos">
+            <Header
+                titulo="Sistema para lanchonete"
+                subtitulo="O melhor da Região"
+                quantidade={0}
+            />
 
-            <h1>👨‍🍳 Pedidos da Cozinha</h1>
-            <p>Usuário: {usuario}</p>
+            <div className="pedidos">
 
-            <div className="pedido">
+                <h1>👨‍🍳 Pedidos da Cozinha</h1>
 
-                <div className="pedido-header">
+                <p>Usuário: {usuario}</p>
 
+                <div className="pedido">
                     <h2>Pedido #001</h2>
 
-                    <span className="pedido-numero">
-                        Pedido recebido
-                    </span>
+                    <p>🍔 2x X-Burguer</p>
+                    <p>🍟 1x Batata Frita</p>
+                    <p>🥤 2x Coca-Cola</p>
 
+                    <p>Status: Preparando</p>
+
+                    <button>
+                        Pedido Pronto
+                    </button>
                 </div>
-
-
-                <div className="pedido-info">
-
-                    <p>
-                        <strong>Mesa:</strong> 03
-                    </p>
-
-                    <p>
-                        <strong>Horário:</strong> 12:15
-                    </p>
-
-                </div>
-
-
-                <ul className="pedido-itens">
-
-                    <li>🍔 2x X-Burguer</li>
-
-                    <li>🍟 1x Batata Frita</li>
-
-                    <li>🥤 2x Coca-Cola</li>
-
-                </ul>
-
-
-                <div className="pedido-status">
-
-                    <strong>Status:</strong>
-
-                    <span className="status-preparando">
-                        Preparando
-                    </span>
-
-                </div>
-
-
-                <button>
-                    Pedido Pronto
-                </button>
 
             </div>
-
-        </div>
-
         </>
-    )
+    );
 }
-export default Pedido
+
+export default Pedido;
